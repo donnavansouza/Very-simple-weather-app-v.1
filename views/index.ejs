@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Very simple weather app</title>
+    
+  </head>
+  <body>
+    <h1>Home</h1>
+    <p>Welcome to the home page!</p>
+    <form action="/" id="form" class="form" method="POST">
+      <input type="text" id="cityCodeInput" name="city" />
+      <input type="text" id="stateCodeInput" name="state" />
+      <input type="text" id="countryCodeInput" name="country" />
+      <button type="submit">Submit</button>
+    </form>
+    <% if(locals.data){ %>
+    <p>The weather in the selected city is %> <%= data.current.temperature_2m %>.</p>
+    <% } %>
+  </body>
+</html>
